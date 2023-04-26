@@ -114,7 +114,7 @@ body {
       rgba(240, 240, 240, 0.144),
       rgba(255, 255, 255, 0.336)
     ),
-    url("file:///E:/Restaurant/photo/header-image2.jpg");
+    url("./photo/header-image2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
