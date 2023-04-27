@@ -9,6 +9,7 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css.css" />
 </head>
 
 <body>
@@ -38,6 +39,9 @@
             <a href="#food-menu" class="btn btn-primary">Menu</a>
         </div>
     </section>
+
+
+<!-- ................about us......................  -->
 
     <section id="about">
         <div class="about-wrapper container">
@@ -1048,7 +1052,7 @@
         <div class="food-menu-container container">
             <div class="food-menu-item">
                 <div class="food-img">
-                    <img src="./photo/b511c997fe19515926b2b66420693c9e_featured_v2.avif" alt="" />
+                    <img src="./photo/ezgif.com-gif-maker.jpg" alt="" />
                 </div>
                 <div class="food-description">
                     <h2 class="food-titile">Bake Samosa (Plain)</h2>
@@ -1171,7 +1175,8 @@
     </section>
   -->
     <!-- contact  -->
-    <!-- <form action="#" method="POST">
+
+   <form  method="POST">   <!--  action="#" -->
     <section id="contact">
         <div class="contact-container container">
             <div class="contact-img">
@@ -1183,10 +1188,25 @@
                 <input type="text" placeholder="Your Name" name="fname"/>
                 <input type="email" placeholder="E-Mail" name="email"/>
                 <textarea cols="30" rows="6" placeholder="Type Your Message" name="message"></textarea>
-                <a href="#" class="btn btn-primary">Submit</a>
+                <a href="#" class="btn btn-primary" name="sub" >Submit</a>
             </div>
         </div>
-    </section> -->
+    </form>
+
+    <?php
+        $con-mysqli_connect('localhost', 'root', '', 'restaurant');
+   
+   if(isset($_POST['sub']))
+   {
+    $name=$_POST['fname'];
+    $email=$_POST['email'];
+    $message=$_POST['message'];
+    $query="INSERT INTO canteen (Name, E-Mail, Message ) VALUES ('$name', '$email', '$message')";
+    $run-mysqli_query($con, $query);
+   }
+?>
+
+    </section>
     <footer id="footer">
         <h2>Canteen &copy; all rights reserved</h2>
     </footer>
@@ -1195,6 +1215,6 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <script src="script.js"></script>
 
-<!-- </form> -->
+ 
 </body>
 </html>
