@@ -1175,8 +1175,8 @@
     </section>
   -->
     <!-- contact  -->
-
-   <form  method="POST">   <!--  action="#" -->
+<!-- 
+   <form  method="POST">    action="#"
     <section id="contact">
         <div class="contact-container container">
             <div class="contact-img">
@@ -1188,23 +1188,23 @@
                 <input type="text" placeholder="Your Name" name="fname"/>
                 <input type="email" placeholder="E-Mail" name="email"/>
                 <textarea cols="30" rows="6" placeholder="Type Your Message" name="message"></textarea>
-                <a href="#" class="btn btn-primary" name="sub" >Submit</a>
+                <a href="" class="btn btn-primary" name="sub" >Submit</a>
             </div>
         </div>
     </form>
 
     <?php
-        $con-mysqli_connect('localhost', 'root', '', 'restaurant');
+        $con-mysqli_connect('localhost', 'root', '', 'canteen');
    
    if(isset($_POST['sub']))
    {
     $name=$_POST['fname'];
     $email=$_POST['email'];
     $message=$_POST['message'];
-    $query="INSERT INTO canteen (Name, E-Mail, Message ) VALUES ('$name', '$email', '$message')";
+    $query="INSERT INTO `canteen` (`Name`, `E-Mail`, `Message`) VALUES ('Name', 'E-Mail', 'Message');
     $run-mysqli_query($con, $query);
    }
-?>
+?> -->
 
     </section>
     <footer id="footer">
